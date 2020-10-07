@@ -1,0 +1,15 @@
+tasks:
+  - init: >
+      language-server/gradlew -p language-server/ build &&
+      yarn --cwd webview && 
+      yarn --cwd extension
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    pullRequestsFromForks: false
+    addCheck: true
+    addComment: false
+    addBadge: false
+    addLabel: false
